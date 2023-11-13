@@ -1,0 +1,129 @@
+// COLORS
+
+$color-primary-lighter: #eb984e;
+$color-primary-darker: #e67d22;
+$color-primary-darker-2: #cf711f;
+$color-primary-darkest: #45260a;
+
+$color-secondary-1: #51cf66;
+$color-secondary-2: #94d82d;
+$color-secondary-3: #ffd43b;
+
+$color-gray-lighter: #aaa;
+$color-gray-lighter-2: #888;
+$color-gray-lighter-3: #6f6f6f;
+$color-gray-darker: #333;
+$color-gray-darker-2: #555;
+$color-gray-darker-3: #767676;
+$color-offwhite: #fdf2e9;
+$color-offwhite-2: #ddd;
+$color-offwhite-3: #fae5d3;
+$color-offwhite-4: #eee;
+$color-white: #fff;
+$color-black: #000;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: $color-gray-darker-2;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+
+  &.tac {
+    text-align: center;
+  }
+}
+
+.grid {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+
+  &:not(:last-child) {
+    margin-bottom: 9.6rem;
+  }
+
+  &--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &--4-cols {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &--center-v {
+    align-items: center;
+  }
+
+  &--cta {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background: linear-gradient(
+      to right bottom,
+      $color-primary-lighter,
+      $color-primary-darker
+    );
+    box-shadow: 0 2.4rem 4.8rem rgba($color-black, 0.15);
+    border-radius: 11px;
+    overflow: hidden;
+
+    *:focus {
+      outline: none;
+      box-shadow: 0 0 0 0.5rem rgba($color-offwhite, 0.5);
+    }
+
+    .heading-3 {
+      margin-bottom: 3.2rem;
+      color: inherit;
+    }
+  }
+
+  &--footer {
+    grid-template-columns: repeat(2, 1.5fr) repeat(3, 1fr);
+  }
+
+  &.mb {
+    margin-bottom: 4.8rem;
+  }
+}
+
+.sticky {
+  .header {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 9;
+    width: 100%;
+    height: 8rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: rgba($color-white, 0.97);
+    box-shadow: 0 1.2rem 3.2rem rgba($color-black, 0.03);
+  }
+
+  .section-hero {
+    margin-top: 9.6rem;
+  }
+}

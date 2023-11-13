@@ -1,0 +1,74 @@
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9.6rem;
+  padding: 0 4.8rem;
+  background-color: $color-offwhite;
+}
+
+.logo {
+  height: 2.2rem;
+}
+
+.main-nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 4.8rem;
+    list-style: none;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: $color-gray-darker;
+      transition: all 0.3s;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-primary-darker-2;
+    }
+
+    &.nav-cta {
+      &:link,
+      &:visited {
+        padding: 1.2rem 2.4rem;
+        color: $color-white;
+        background-color: $color-primary-darker;
+        border-radius: 9px;
+      }
+
+      &:hover,
+      &:active {
+        background-color: $color-primary-darker-2;
+      }
+    }
+  }
+}
+
+// MOBILE MENU
+.mobile-nav {
+  &__btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__icon {
+    width: 4.8rem;
+    height: 4.8rem;
+    color: $color-gray-darker;
+
+    &[name="close-outline"] {
+      display: none;
+    }
+  }
+}

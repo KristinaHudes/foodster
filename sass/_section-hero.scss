@@ -1,0 +1,56 @@
+.section-hero {
+  padding: 4.8rem 0 9.6rem;
+  background-color: $color-offwhite;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 9.6rem;
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+
+  &__description {
+    margin-bottom: 4.8rem;
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+
+  &__img {
+    width: 100%;
+  }
+}
+
+.delivered {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: 8rem;
+
+  &__imgs {
+    display: flex;
+
+    img {
+      width: 4.8rem;
+      height: 4.8rem;
+      border: 3px solid $color-offwhite;
+      border-radius: 50%;
+
+      &:not(:last-child) {
+        margin-right: -1.6rem;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    font-weight: 600;
+
+    span {
+      font-weight: 700;
+      color: $color-primary-darker-2;
+    }
+  }
+}
