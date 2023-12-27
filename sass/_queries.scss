@@ -69,6 +69,10 @@
     font-size: 50%;
   }
 
+  .heading-1 {
+    z-index: 10;
+  }
+
   .hero {
     grid-template-columns: 1fr;
     gap: 6.4rem;
@@ -120,7 +124,7 @@
   }
 
   .main-nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     display: flex;
@@ -135,6 +139,7 @@
     backdrop-filter: blur(3px);
     transform: translateX(100%);
     transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+    z-index: 9;
   }
 
   .nav-open .main-nav {
