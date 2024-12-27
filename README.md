@@ -54,3 +54,7 @@ Make sure you have the following installed:
    ```bash
    npm run watch:sass
    ```
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
